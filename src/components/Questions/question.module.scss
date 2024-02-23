@@ -1,0 +1,52 @@
+@import '../../styles/fonts';
+
+.question__main__container {
+    --border-radius: 0.6rem;
+    --padding: 1rem;
+    --margin-gap: 1rem;
+    --padding-list: 0.4rem;
+    --font-size: 0.8rem;
+    --font-size-question: 1rem;
+    --font-size-options: 1.2rem;
+
+    border: 1px solid gray;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    margin: var(--margin-gap) 0;
+
+    &>div:first-child {
+        margin: var(--margin-gap) 0;
+        font-family: $poppins-sans;
+        font-size: var(--font-size-question);
+    }
+
+    &>div:nth-child(2)>li {
+        list-style: none;
+        padding: var(--padding-list);
+        font-family: $poppins-sans;
+        font-size: var(--font-size);
+
+        &>input {
+            display: none;
+        }
+
+        &>label {
+            position: relative;
+            margin-left: 0.5rem;
+            font-size: var(--font-size-question);
+            font-size: var(--font-size-options);
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -1.5rem;
+                top: 0.2rem;
+                width: 1.2rem;
+                height: 1.2rem;
+                border: 1px solid gray;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+}

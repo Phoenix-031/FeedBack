@@ -1,0 +1,27 @@
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.student__main__container {
+
+    --padding: 1rem;
+    --margin-gap: 1rem;
+    --heading: 2rem;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include flex-container(column, center, center);
+
+    .student__heading__container {
+        margin: var(--margin-gap) 0;
+        padding: var(--padding);
+        font-size: var(--heading);
+    }
+
+    .student__questions__section {
+        width: 75%;
+    }
+}
