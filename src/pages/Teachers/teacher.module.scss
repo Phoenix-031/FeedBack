@@ -1,3 +1,5 @@
+@import '../../styles//breakpoint';
+
 @mixin flex-container($direction: row, $justify: center, $align: center) {
     display: flex;
     flex-direction: $direction;
@@ -24,4 +26,49 @@
     .teacher__questions__section {
         width: 75%;
     }
+
+    @include xs {
+        --heading: 1.7rem;
+
+        .teacher__heading__container {
+            font-size: var(--heading);
+        }
+
+        .teacher__questions__section {
+            width: 95%;
+        }
+    }
+
+    @include mobile {
+        --heading: 1.9rem;
+
+        .teacher__heading__container {
+            font-size: var(--heading);
+        }
+
+        .teacher__questions__section {
+            width: 90%;
+        }
+    }
+
+    @include desktop {
+        --heading: 2.3rem;
+
+        .teacher__heading__container {
+            font-size: var(--heading);
+        }
+
+        .teacher__questions__section {
+            width: 80%;
+        }
+    }
+
+    @include large {
+        --heading: 2rem;
+
+        .teacher__heading__container {
+            font-size: var(--heading);
+        }
+    }
+
 }

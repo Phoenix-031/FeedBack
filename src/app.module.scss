@@ -1,4 +1,5 @@
 @import './styles/fonts';
+@import './styles/breakpoint';
 
 @mixin flex-container($direction: row, $justify: center, $align: center) {
     display: flex;
@@ -9,8 +10,8 @@
 
 .main__container {
 
-    --heading-font: 2.5rem;
-    --padding-main: 2rem;
+    --heading-font: 1.2rem;
+    --padding-main: 0.8rem;
     --card-border-radius: 1rem;
     --gap: 0.6rem;
     display: flex;
@@ -20,29 +21,39 @@
     @include flex-container(column, flex-start, center);
     padding: var(--padding-main);
     font-family: $poppins-sans;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .main__container__heading {
         width: 80%;
         text-align: center;
-        font-size: var(--heading-font)
+        font-size: var(--heading-font);
+        font-weight: 500;
     }
 
     .main__flex__container {
         @include flex-container(row, center, center);
         flex-wrap: wrap;
         gap: var(--gap);
-        width: max-content;
+        width: 100%;
 
         &>div:nth-child(n) {
-            width: 40%;
+            // width: 40%;
+            width: 100%;
             height: 15rem;
             border: 2px solid gray;
             border-radius: var(--card-border-radius);
             padding: 1rem;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-            @include flex-container(row, center, center);
+            @include flex-container(column, center, center);
             cursor: pointer;
             font-size: 1.2rem;
+
+            &>div:first-child {
+                height: 3rem;
+                aspect-ratio: 1;
+                font-size: 2rem;
+            }
         }
 
         &>div:nth-child(n):hover {
@@ -50,5 +61,31 @@
             transition: all 0.3s ease;
         }
 
+    }
+
+    @include sm {
+        --padding-main: 2rem;
+        --heading-font: 1.6rem;
+    }
+
+    @include mobile {
+        --padding-main: 2rem;
+        --heading-font: 2.2rem;
+
+        .main__flex__container {
+            &>div:nth-child(n) {
+                width: 40%;
+            }
+        }
+    }
+
+    @include tablet {
+        --padding-main: 2.2rem;
+
+        .main__flex__container {
+            &>div:nth-child(n) {
+                width: 30%;
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ const Employers = () => {
   return (
     <div className={styles.employers__main__container}>
       <div className={styles.employers__heading__container}>
-        employers's Feedback Form
+        Employers's Feedback Form
       </div>
 
       <div className={styles.employers__questions__section}>
