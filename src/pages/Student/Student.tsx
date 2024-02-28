@@ -1,6 +1,9 @@
 import {StudentsData} from '../../data/students'
 import Questions from '../../components/Questions/Questions'
 
+import { MdKeyboardArrowLeft } from "react-icons/md";
+
+
 
 import styles from './student.module.scss'
 
@@ -8,6 +11,7 @@ const Student = () => {
   return (
     <div className={styles.student__main__container}>
       <div className={styles.student__heading__container}>
+        <div><MdKeyboardArrowLeft /></div>
         Student's Feedback Form
       </div>
 

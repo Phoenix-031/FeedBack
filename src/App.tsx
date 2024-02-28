@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import { PiStudentBold } from "react-icons/pi";
 import { RiParentFill } from "react-icons/ri";
 import { FaChalkboardTeacher } from "react-icons/fa";
-
-
+import { MdPerson4 } from "react-icons/md";
+import { BsFileEarmarkPersonFill } from "react-icons/bs";
 
 const App = () => {
 
@@ -31,9 +31,11 @@ const App = () => {
           Teacher Feedback
         </div>
         <div onClick={() => navigate('/alumni')}>
+          <div><MdPerson4 /></div>
           Alumni Feedback
         </div>
         <div onClick={() => navigate('/employers')}>
+          <div><BsFileEarmarkPersonFill /></div>
           Employers Feedback
         </div>
       </div>

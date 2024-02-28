@@ -11,7 +11,7 @@ const Alumni = () => {
 
       <div className={styles.alumni__sections__container}>
 
-        {AlumniData.map((alumnisection, index) => {
+        {AlumniData.map((alumnisection) => {
           return (
 
             <div>
