@@ -1,11 +1,12 @@
 import styles from './alumni.module.scss';
 
 import { AlumniData } from '../../data/alumni';
+import Questions from '../../components/Questions/Questions';
 
 const Alumni = () => {
   return (
     <div className={styles.alumni__main__section}>
-      <div className={styles.alumni__heading__container}>
+      <div className={styles.alumni__heading__container}> 
         <p>Alumni's Feedback Form</p>
       </div>
 
@@ -15,23 +16,14 @@ const Alumni = () => {
           return (
 
             <div>
-              <div>
+              <div className={styles.title__section__container}>
                 <p>{alumnisection.sectionTitle}</p>
               </div>
 
               <div>
                 {alumnisection.questions.map((question, index) => {
                   return (
-                    <li key={index}>
-                      <input
-                        type="radio"
-                        id={`option${index}`}
-                        name="quizOptions"
-                        value={question.options}
-                      />
-                      <div className={styles.custom__checkbox}></div>
-                      <label htmlFor={`option${index}`}>{question.question}</label>
-                    </li>
+                    <Questions key={index} data={question} />
                   )
                 })
                 }
