@@ -1,0 +1,82 @@
+@import '../../styles//breakpoint';
+
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.alumni__main__section {
+
+    --padding: 1rem;
+    --margin-gap: 1rem;
+    --heading: 2rem;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include flex-container(column, center, center);
+
+    .alumni__heading__container {
+        margin: var(--margin-gap) 0;
+        padding: var(--padding);
+        font-size: var(--heading);
+    }
+
+    .alumni__sections__container {
+        width: 75%;
+    }
+
+    @include xs {
+        --heading: 1.7rem;
+
+        .alumni__heading__container {
+            font-size: var(--heading);
+        }
+
+        .alumni__sections__container {
+            width: 95%;
+        }
+    }
+
+    @include mobile {
+        --heading: 1.9rem;
+
+        .alumni__heading__container {
+            font-size: var(--heading);
+        }
+
+        .alumni__sections__container {
+            width: 90%;
+        }
+    }
+
+    
+    @include desktop {
+        --heading: 2.3rem;
+
+        .alumni__heading__container {
+            font-size: var(--heading);
+        }
+
+        .alumni__sections__container {
+            width: 80%;
+        }
+    }
+
+    
+    @include large {
+        --heading: 2rem;
+
+        .alumni__heading__container {
+            font-size: var(--heading);
+        }
+    }
+}
+
+.title__section__container {
+    font-size: 1.5rem;
+    margin: var(--margin-gap) 0;
+    padding: var(--padding);
+    // font-size: var(--heading);
+}
