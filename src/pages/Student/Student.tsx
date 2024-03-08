@@ -11,8 +11,8 @@ const Student = () => {
   return (
     <div className={styles.student__main__container}>
       <div className={styles.student__heading__container}>
-        <div><MdKeyboardArrowLeft /></div>
-        Student's Feedback Form
+        {/* <div><MdKeyboardArrowLeft /></div> */}
+        <div>Student's Feedback Form</div>
       </div>
 
       <div className={styles.student__questions__section}>

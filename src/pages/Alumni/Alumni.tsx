@@ -1,6 +1,7 @@
 import styles from './alumni.module.scss';
 
 import { AlumniData } from '../../data/alumni';
+import Questions from '../../components/Questions/Questions';
 
 const Alumni = () => {
   return (
@@ -21,18 +22,19 @@ const Alumni = () => {
 
               <div>
                 {alumnisection.questions.map((question, index) => {
-                  return (
-                    <li key={index}>
-                      <input
-                        type="radio"
-                        id={`option${index}`}
-                        name="quizOptions"
-                        value={question.options}
-                      />
-                      <div className={styles.custom__checkbox}></div>
-                      <label htmlFor={`option${index}`}>{question.question}</label>
-                    </li>
-                  )
+                  return <Questions key={index} data={question} />
+                  // return (
+                  //   <li key={index}>
+                  //     <input
+                  //       type="radio"
+                  //       id={`option${index}`}
+                  //       name="quizOptions"
+                  //       value={question.options}
+                  //     />
+                  //     <div className={styles.custom__checkbox}></div>
+                  //     <label htmlFor={`option${index}`}>{question.question}</label>
+                  //   </li>
+                  // )
                 })
                 }
               </div>

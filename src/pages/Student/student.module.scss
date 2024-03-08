@@ -21,6 +21,13 @@
         margin: var(--margin-gap) 0;
         padding: var(--padding);
         font-size: var(--heading);
+        width: 80%;
+        @include flex-container(row, center, center);
+
+        &>div:nth-child(1) {
+            justify-self: flex-start;
+        }
+
     }
 
     .student__questions__section {

@@ -8,14 +8,22 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 import { MdPerson4 } from "react-icons/md";
 import { BsFileEarmarkPersonFill } from "react-icons/bs";
 
+import kgeclogo from './assets/kgec-logo-dark.jpeg'
+
 const App = () => {
 
   const navigate = useNavigate()
   
   return (
     <div className={style.main__container}>
+      <div className={style.kgec__logo__container}>
+        <img src={kgeclogo} alt="KGEC Logo" />
+      </div>
+      <div>
+        <p className={style.main__container__heading__sub}>Kalyani Government Engineering College</p>
+      </div>
       <div className={style.main__container__heading}>
-        <p>Feedback System</p>
+        <p>Feedback Portal</p>
       </div>
       <div className={style.main__flex__container}>
         <div onClick={() => navigate('/parents')}>
