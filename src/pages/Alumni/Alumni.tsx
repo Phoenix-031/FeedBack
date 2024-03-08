@@ -6,7 +6,7 @@ import Questions from '../../components/Questions/Questions';
 const Alumni = () => {
   return (
     <div className={styles.alumni__main__section}>
-      <div className={styles.alumni__heading__container}>
+      <div className={styles.alumni__heading__container}> 
         <p>Alumni's Feedback Form</p>
       </div>
 
@@ -16,7 +16,7 @@ const Alumni = () => {
           return (
 
             <div>
-              <div>
+              <div className={styles.title__section__container}>
                 <p>{alumnisection.sectionTitle}</p>
               </div>
 

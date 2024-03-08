@@ -9,10 +9,10 @@
     --font-size-question: 1rem;
     --font-size-options: 1.2rem;
 
-    border: 1px solid gray;
     border-radius: var(--border-radius);
     padding: var(--padding);
     margin: var(--margin-gap) 0;
+    border: 1px solid gray;
 
     &>div:first-child {
         margin: var(--margin-gap) 0;
