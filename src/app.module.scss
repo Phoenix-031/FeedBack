@@ -27,6 +27,8 @@
 
 
     &>div:nth-child(2) {
+        text-align: center;
+
         .main__container__heading__sub {
             font-size: 2rem;
             font-weight: 600;
@@ -73,7 +75,7 @@
     }
 
     @include sm {
-        --padding-main: 2rem;
+        // --padding-main: 2rem;
         --heading-font: 1.6rem;
     }
 

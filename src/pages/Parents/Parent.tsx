@@ -12,15 +12,19 @@ const Parents = () => {
       </div>
 
       <div className={styles.parents__questions__section}>
-{
-  ParentsQuestions.map((parents, index) => {
-    return (
-      <div className=''>
-        <Questions key={index} data={parents} />
+        {
+          ParentsQuestions.map((parents, index) => {
+            return (
+              <div className=''>
+                <Questions key={index} data={parents} />
+              </div>
+            )
+          })
+        }
       </div>
-    )
-  })
-}
+
+      <div className={styles.submit__button__container}>
+        <button>Submit</button>
       </div>
     </div>
   )

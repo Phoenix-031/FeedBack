@@ -19,12 +19,23 @@
 
     .parents__heading__container {
         margin: var(--margin-gap) 0;
-        padding: var(--padding);
         font-size: var(--heading);
     }
 
     .parents__questions__section {
-        width: 75%;
+        width: 95%;
+    }
+
+    .submit__button__container {
+        width: 100%;
+        @include flex-container(row, center, center);
+        padding: var(--padding);
+
+        &>button {
+            padding: var(--padding);
+            border-radius: 0.5rem;
+            width: 20rem;
+        }
     }
 
     @include xs {
