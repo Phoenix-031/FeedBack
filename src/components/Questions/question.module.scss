@@ -20,7 +20,7 @@
         font-size: var(--font-size-question);
     }
 
-    &>div:nth-child(2)>li {
+    &>div:nth-child(2)>div {
         list-style: none;
         padding: var(--padding-list);
         font-family: $poppins-sans;
@@ -36,17 +36,6 @@
             font-size: var(--font-size-question);
             font-size: var(--font-size-options);
             cursor: pointer;
-
-            &::before {
-                content: '';
-                position: absolute;
-                left: -1.5rem;
-                top: 0.2rem;
-                width: 1.2rem;
-                height: 1.2rem;
-                border: 1px solid gray;
-                border-radius: 0.5rem;
-            }
         }
     }
 }
