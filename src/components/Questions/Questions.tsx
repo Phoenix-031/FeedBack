@@ -1,6 +1,6 @@
 
 import styles from './question.module.scss'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import type { RadioChangeEvent } from 'antd';
 import { Radio } from 'antd';
