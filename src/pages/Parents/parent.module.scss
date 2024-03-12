@@ -26,6 +26,41 @@
         width: 95%;
     }
 
+    .container__text__section {
+        width: 80%;
+        @include flex-container(column, flex-start, items-baseline);
+        padding: 0 1rem;
+        gap: 1rem;
+
+        &>div:nth-child(2) {
+            @include flex-container(row, flex-start, center);
+            gap: 1rem;
+        }
+
+        &>div:nth-child(3) {
+            @include flex-container(row, flex-start, center);
+            gap: 1rem;
+        }
+
+        &>div:nth-child(4) {
+            width: 30%;
+            @include flex-container(column, center, baseline);
+            gap: 0.5rem;
+        }
+
+        &>div:nth-child(5) {
+            width: 30%;
+            @include flex-container(column, center, baseline);
+            gap: 0.5rem;
+        }
+
+        &>div:nth-child(6) {
+            width: 30%;
+            @include flex-container(column, center, baseline);
+            gap: 0.5rem;
+        }
+    }
+
     .submit__button__container {
         width: 100%;
         @include flex-container(row, center, center);
